@@ -1,6 +1,6 @@
 const API_URL = import.meta.env.VITE_API_URL
 
-export async function getCategoriesByUserType (type = 'invitado') {
+export async function getCategoriesByUserType (type ='cliente') {
   try {
     const response = await fetch(`${API_URL}/api/CategoriasProducto/getCategoriasProducto/${type}`, {
       method: 'GET',
