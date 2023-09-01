@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Calendar from 'react-calendar';
 
-const time = ['08:00','09:00','10:00','14:00','15:00']
+const time = ['09:00','09:30','10:00','10:30','16:00', '16:30','17:00', '17:30','18:00']
 
 const Times = (props) => {
 
@@ -23,7 +23,10 @@ const Times = (props) => {
                 )
              })}
             <div>
-             {info ? `Turno seleccionado para: ${props.date.toDateString()} ${event} hs.` : null}
+             {info ? <div>`Turno seleccionado para: {props.date.toDateString()} {event} hs.` <button>Confirmar Turno</button>
+             
+                </div>
+              : null}
             </div>
         </div>
   )
